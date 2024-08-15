@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<script src="https://kit.fontawesome.com/81814e41f6.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	<title>Mi Portafolio Digital - Santiago Paredes</title>
+	<link rel="icon" href="C:\Users\Santiago Paredes\Desktop\Curriculum\red_dot.png" type="image/x-icon">
+</head>
+
+<body>
+	<div id="root">
+		
+		<aside class="aside">
+			<div class="name-container">
+    			<div class="memoji-container"><img src="memoji.webp" alt="Me" style="width: 100%;"></div>
+    			<h2 class="name">Santiago Paredes</h2>
+    			<h5 class="degree">Software Engineer</h5>
+    			<div class="aside-line"></div>
+    		</div>
+
+    		<div class="contact-container">
+    			<div class="contact-item">
+    				<div class="contact-image"><i class="fa-solid fa-phone"></i></div>
+    				<div class="contact-title">Telefono</div>
+    				<div class="contact-info">+52 (812) 570 0320</div>
+    			</div>
+    			<div class="contact-item">
+    				<div class="contact-title">Email</div>
+    				<div class="contact-image"><i class="fa-solid fa-envelope"></i>
+    				</div>
+    				<div class="contact-info">santiparedes738@gmail...</div>
+				</div>
+    			<div class="contact-item">
+    				<div class="contact-title">Birthday</div>
+    				<div class="contact-image"><i class="fa-brands fa-linkedin"></i></div>
+    				<div class="contact-info">7, May, 2004</div>
+				</div>
+				<div class="contact-item">
+					<div class="contact-title">Location</div>
+    				<div class="contact-image"><i class="fa-solid fa-location-dot"></i></div>
+    				<div class="contact-info">Monterrey, N.L.</div>
+				</div>
+
+				<div class="socialmedia-container">
+					<div class="socialmedialogo"><a class="logo" href="https://www.instagram.com/santipa777/"><i class="fa-brands fa-square-instagram"></i></a></div>
+					<div class="socialmedialogo"><a class="logo" href="https://www.instagram.com/santipa777/"><i class="fa-brands fa-square-facebook"></i></a></div>
+					<div class="socialmedialogo"><a class="logo" href="https://www.instagram.com/santipa777/"><i class="fa-brands fa-square-whatsapp"></i></a></div>
+				</div>
+    		</div>
+    	</aside>
+
+    	<main class="main">
+    		<header class="header">
+    			<h1 class="header__title">Proyects</h1>
+				<div class="menu">
+					<nav class=nav>
+						<ul class= "nav__ul">
+							<li class="nav__li">
+							<a id="About" href="index.html">About</a>
+							</li>
+							<li class="nav__li">
+							<a id="Resume" href="Resume.html">Resume</a>
+							</li>
+							<li class="nav__li">
+							<a id="Proyects" href="MisProyectos.html">Proyects</a>
+							</li>
+							<li class="nav__li">
+							<a id="Blogs " href="Blogs.html">Blogs</a>
+							</li>
+							<li class="nav__li">
+							<a id="Contact" href="Contact.html">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+				<div class="header__line"></div>
+
+			<article class="article">
+
+				<div id="myBtnContainer">
+				  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+				  <button class="btn" onclick="filterSelection('1')"> Web Design</button>
+				  <button class="btn" onclick="filterSelection('2')"> Game Development</button>
+				  <button class="btn" onclick="filterSelection('3')"> Database Management</button>
+				  <button class="btn" onclick="filterSelection('4')"> Data and Algorithms</button>
+				</div>
+
+				<div class="card 1 ">
+  					<img src="MyCurriculumjpg.jpg" alt="Me" style="width: 100%;">
+  					<div class="card-container">
+    					<h4><b>My Resume</b></h4>
+    					<p>Web Design</p>
+  					</div>
+				</div>
+				<div class="card 2">
+  					<img src="Gamedevimg.png" alt="Me" style="width: 100%;">
+  					<div class="card-container">
+    					<h4><b>On the Fly!</b></h4>
+    					<p>Game Development</p>
+  					</div>
+				</div>
+				<div class="card 3">
+  					<img src="blackjpg.jpg" alt="Me" style="width: 100%;">
+  					<div class="card-container">
+    					<h4><b>Automatic Inventory</b></h4>
+    					<p>Database Management</p>
+  					</div>
+				</div>
+				<!--<div class="card 4">
+  					<img src="blackjpg.jpg" alt="Me" style="width: 100%;">
+  					<div class="card-container">
+    					<h4><b>Movie Menu</b></h4>
+    					<p>Data and Algorithms</p>
+  					</div>
+				</div>-->
+				
+			</article>
+
+			
+
+ 
+    	</main>
+	</div>
+	
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("card");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
+		
