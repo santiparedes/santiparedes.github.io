@@ -480,6 +480,12 @@ textarea {
  	margin: 0px;
  }
 
+
+.article.contact{
+ 	margin: 0px -40px;
+ }
+
+
  .main { 
   	flex: 1;
   	margin: 0px 0px 0px 0px;
@@ -491,8 +497,16 @@ textarea {
   	left: -500px;
   }
 
+.title {
+	position: relative;
+	left: -27px;
+	top: -2px;
+}
+
  .titles-item {
  	width: 100%;
+ 	height: auto;
+
  }
 
  .skills-container {
@@ -500,8 +514,8 @@ textarea {
  	margin: 0px -30px;
  }
 
-.filter-container {
-
+.BtnContainer{
+	display: none;
 }
 
 .card {
@@ -510,10 +524,6 @@ textarea {
 
 .blog-card {
 	width: 100%;
-}
-
-.map {
-	margin: 0px -30px;
 }
 
 .header {
@@ -552,6 +562,6 @@ textarea {
     float: right;
   }
 
-}
+
  
 }
