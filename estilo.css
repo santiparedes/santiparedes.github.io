@@ -35,12 +35,20 @@ article h2{
 	display: flex;
 }
 
-.menu {
-    display: inline-block;
+.header {
+	display: inline-block;
     background-color: #28282B;
     padding: 15px 20px;
     float: right;
-    border-radius: 0px 26px 0px 26px;  
+    border-radius: 0px 26px 0px 26px;
+}
+.menu {
+      
+}
+
+.menu-icon {
+	display: none;
+	font-size: 26px;
 }
 
 .header__title {
@@ -49,7 +57,6 @@ article h2{
 }
 
 .header__line {
-	display: inline-block;
 	background-color:#DAA520 ;
 	margin: 20px 20px 20px 120px;
 	padding: 2px;
@@ -173,10 +180,11 @@ article h2{
 }
 
 .titles-container {
-	position: relative;
+
 }
 
 .titles-item {
+	align-items: stretch;
 	position: relative;
 	display: inline-flex;
 	padding: 20px;
@@ -458,7 +466,92 @@ textarea {
 /*============================Mobile===========================*/
 
 @media only screen and (max-width: 600px) {
-  body {
-    background-color: blue;
+  * {
+  	margin: 0px;
+  	padding: 0px;
   }
+
+  body {
+    background-color: #1F2021;
+  }
+
+
+.article{
+ 	margin: 0px;
+ }
+
+ .main { 
+  	flex: 1;
+  	margin: 0px 0px 0px 0px;
+  	padding: 10px;
+  }
+
+.aside {
+  	position: absolute;
+  	left: -500px;
+  }
+
+ .titles-item {
+ 	width: 100%;
+ }
+
+ .skills-container {
+ 	border-radius: 0px;
+ 	margin: 0px -30px;
+ }
+
+.filter-container {
+
+}
+
+.card {
+	width: 47%;
+}
+
+.blog-card {
+	width: 47%;
+}
+
+.map {
+	margin: 0px -30px;
+}
+
+.header {
+	width: 110%;
+	display: block;
+	padding: 20px;
+	border-radius: 0px;
+	margin: -10px -10px;
+	background-color: #28282B;
+}
+
+ .nav {
+ 	display: none;
+    position: absolute;
+    top: 3.7rem;
+    left: 0;
+    width: 100%;
+    background-color: #28282B;
+    text-align: center;
+  }
+
+  .nav.responsive {
+    display: block;
+    z-index: 2;
+  }
+
+.nav__li {
+  	width: 100%;
+    display: block;
+  }
+
+
+  .menu-icon {
+    display: block;
+    z-index: 1;
+    float: right;
+  }
+
+}
+ 
 }

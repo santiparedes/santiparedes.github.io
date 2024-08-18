@@ -11,6 +11,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 	<title>Mi Portafolio Digital - Santiago Paredes</title>
 	<link rel="icon" href="C:\Users\Santiago Paredes\Desktop\Curriculum\red_dot.png" type="image/x-icon">
+	<script src="script.js"></script>
 </head>
 
 <body>
@@ -57,9 +58,10 @@
 
     	<main class="main">
     		<header class="header">
-    			<h1 class="header__title">Proyects</h1>
-				<div class="menu">
-					<nav class=nav>
+					<a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+        				<i class="fa fa-bars"></i>
+      				</a>
+					<nav id="navigation-bar" class=nav>
 						<ul class= "nav__ul">
 							<li class="nav__li">
 							<a id="About" href="index.html">About</a>
@@ -78,9 +80,8 @@
 							</li>
 						</ul>
 					</nav>
-				</div>
 			</header>
-
+				<h1 class="header__title">Proyects</h1>
 				<div class="header__line"></div>
 
 			<article class="article">
