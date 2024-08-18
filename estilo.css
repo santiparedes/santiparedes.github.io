@@ -6,8 +6,8 @@
 body {
 	background-color: 	rgb(19, 18, 18);
 	color: #dbdada ;
-	font-family: "Averia Serif Libre", serif;
-  	font-weight: 800;
+	font-family: "Roboto", system-ui;
+  	font-weight: 400;
   	font-style: normal;
   	font-size: 20px;
 }
