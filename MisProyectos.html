@@ -49,9 +49,9 @@
 				</div>
 
 				<div class="socialmedia-container">
-					<div class="socialmedialogo"><a class="logo" href="https://www.instagram.com/santipa777/"><i class="fa-brands fa-square-instagram"></i></a></div>
-					<div class="socialmedialogo"><a class="logo" href="https://www.instagram.com/santipa777/"><i class="fa-brands fa-square-facebook"></i></a></div>
-					<div class="socialmedialogo"><a class="logo" href="https://www.instagram.com/santipa777/"><i class="fa-brands fa-square-whatsapp"></i></a></div>
+					<div class="socialmedialogo"><a class="logo" href="x"><i class="fa-brands fa-square-instagram"></i></a></div>
+					<div class="socialmedialogo"><a class="logo" href="x"><i class="fa-brands fa-square-facebook"></i></a></div>
+					<div class="socialmedialogo"><a class="logo" href="x"><i class="fa-brands fa-square-whatsapp"></i></a></div>
 				</div>
     		</div>
     	</aside>
@@ -64,19 +64,19 @@
 					<nav id="navigation-bar" class=nav>
 						<ul class= "nav__ul">
 							<li class="nav__li">
-							<a id="About" href="index.html">About</a>
+							<a class="tab" href="index.html">About</a>
 							</li>
 							<li class="nav__li">
-							<a id="Resume" href="Resume.html">Resume</a>
+							<a class="tab" href="Resume.html">Resume</a>
 							</li>
 							<li class="nav__li">
-							<a id="Proyects" href="MisProyectos.html">Proyects</a>
+							<a class="tab active" href="MisProyectos.html">Proyects</a>
 							</li>
 							<li class="nav__li">
-							<a id="Blogs " href="Blogs.html">Blogs</a>
+							<a class="tab " href="Blogs.html">Blogs</a>
 							</li>
 							<li class="nav__li">
-							<a id="Contact" href="Contact.html">Contact</a>
+							<a class="tab" href="Contact.html">Contact</a>
 							</li>
 						</ul>
 					</nav>
@@ -99,83 +99,30 @@
 				<div class="card 1 ">
   					<img src="MyCurriculumjpg.jpg" alt="Me" style="width: 100%;">
   					<div class="card-container">
-    					<h4><b>My Resume</b></h4>
+    					<h4>My Resume</h4>
     					<p>Web Design</p>
   					</div>
 				</div>
 				<div class="card 2">
   					<img src="Gamedevimg.png" alt="Me" style="width: 100%;">
   					<div class="card-container">
-    					<h4><b>On the Fly!</b></h4>
+    					<h4>On the Fly!</h4>
     					<p>Game Development</p>
   					</div>
 				</div>
 				<div class="card 3">
   					<img src="blackjpg.jpg" alt="Me" style="width: 100%;">
   					<div class="card-container">
-    					<h4><b>Automatic Inventory</b></h4>
+    					<h4>Automatic Inventory</h4>
     					<p>Database Management</p>
   					</div>
 				</div>
-				<!--<div class="card 4">
-  					<img src="blackjpg.jpg" alt="Me" style="width: 100%;">
-  					<div class="card-container">
-    					<h4><b>Movie Menu</b></h4>
-    					<p>Data and Algorithms</p>
-  					</div>
-				</div>-->
-				
 			</article>
-
-			
-
- 
     	</main>
 	</div>
 	
 <script>
 filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("card");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
 </script>
 
 </body>

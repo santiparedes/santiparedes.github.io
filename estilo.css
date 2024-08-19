@@ -7,8 +7,8 @@ body {
 	background-color: 	rgb(19, 18, 18);
 	color: #dbdada ;
 	font-family: "Roboto", system-ui;
-  	font-weight: 400;
-  	font-style: normal;
+  font-weight: 400;
+  font-style: normal;
   	font-size: 20px;
 }
 
@@ -64,13 +64,19 @@ article h2{
 }
 
 .nav__li {
+	font-weight: bold;
 	display: inline-block;
 	padding: 2px;
 	margin: 12px;
 }
 
 .nav__li:hover > a {
-  color: #DAA520 ;
+  color:  grey;
+}
+
+.tab.active {
+  color: #DAA520;
+
 }
 
 .nav__li a {
@@ -119,6 +125,9 @@ article h2{
 	margin-bottom: 20px;
 	border-radius: 26px;
 }
+.contact-container {
+	height: auto;
+}
 
 .contact-item {
 	display: flex;
@@ -128,6 +137,7 @@ article h2{
 }
 
 .contact-title {
+	font-weight: bold;
 	position: absolute;
   	top: 24px;
   	left: 87px;
@@ -200,7 +210,7 @@ article h2{
 	flex: 1;
 	position: absolute;
 	left: 80px;
-	font-size: 19px;
+	font-weight: bold;
 }
 
 .titles-text {
@@ -462,7 +472,6 @@ textarea {
 
 }
 
-
 /*============================Mobile===========================*/
 
 @media only screen and (max-width: 600px) {
@@ -483,7 +492,7 @@ textarea {
 
 .article.contact{
  	margin: 0px -10px;
-	padding: 0px;
+ 	padding: 0px;
  }
 
 
@@ -552,13 +561,14 @@ textarea {
   }
 
 .nav__li {
+	padding: 10px;
   	width: 100%;
     display: block;
   }
 
 
   .menu-icon {
-    display: block;
+    display: inline-block;
     z-index: 1;
     float: right;
   }
