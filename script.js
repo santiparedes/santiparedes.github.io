@@ -48,4 +48,9 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+
 

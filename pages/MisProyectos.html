@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../estilo.css">
+	<link rel="stylesheet" type="text/css" href="../normalize.css">
+	<script src="https://kit.fontawesome.com/81814e41f6.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	<title>Mi Portafolio Digital - Santiago Paredes</title>
+	<link rel="icon" href="red_dot.png" type="image/x-icon">
+	<script src="../script.js"></script>
+</head>
+
+<body>
+	<div id="root">
+		
+		<aside class="aside">
+			<div class="name-container">
+    			<div class="memoji-container"><img src="../images/memoji.webp" alt="Me" style="width: 100%;"></div>
+    			<h2 class="name">Santiago Paredes</h2>
+    			<h5 class="degree">Software Engineer</h5>
+    			<div class="aside-line"></div>
+    		</div>
+
+    		<div class="contact-container">
+    			<div class="contact-item">
+    				<div class="contact-image"><i class="fa-solid fa-phone"></i></div>
+    				<div class="contact-title">Telefono</div>
+    				<div class="contact-info">+52 (812) 570 0320</div>
+    			</div>
+    			<div class="contact-item">
+    				<div class="contact-title">Email</div>
+    				<div class="contact-image"><i class="fa-solid fa-envelope"></i>
+    				</div>
+    				<div class="contact-info">santiparedes738@gmail..</div>
+				</div>
+				<div class="contact-item">
+					<div class="contact-title">Github</div>
+    				<div class="contact-image"><i class="fa-brands fa-github"></i></div>
+    				<div class="contact-info"><a href="https://github.com/santiparedes"><u>santiparedes</u></a></div>
+				</div>
+				<div class="contact-item">
+					<div class="contact-title">Linkedln</div>
+    				<div class="contact-image"><i class="fa-brands fa-linkedin"></i></div>
+    				<div class="contact-info"><a href="https://www.linkedin.com/in/santiparedes/"><u>santiparedes</u></a></div>
+				</div>
+    			<div class="contact-item">
+    				<div class="contact-title">Birthday</div>
+    				<div class="contact-image"><i class="fa-solid fa-cake-candles"></i></div>
+    				<div class="contact-info">7, May, 2004</div>
+				</div>
+				<div class="contact-item">
+					<div class="contact-title">Location</div>
+    				<div class="contact-image"><i class="fa-solid fa-location-dot"></i></div>
+    				<div class="contact-info">Monterrey, N.L.</div>
+				</div>
+
+				<div class="socialmedia-container">
+					<div class="socialmedialogo"><a class="logo" href="x"><i class="fa-brands fa-square-instagram"></i></a></div>
+					<div class="socialmedialogo"><a class="logo" href="x"><i class="fa-brands fa-square-facebook"></i></a></div>
+					<div class="socialmedialogo"><a class="logo" href="x"><i class="fa-brands fa-square-whatsapp"></i></a></div>
+				</div>
+    		</div>
+    	</aside>
+
+    	<main class="main">
+    		<header class="header">
+					<a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+        				<i class="fa fa-bars"></i>
+      				</a>
+					<nav id="navigation-bar" class=nav>
+						<ul class= "nav__ul">
+							<li class="nav__li">
+							<a class="tab" href="index.html">About</a>
+							</li>
+							<li class="nav__li">
+							<a class="tab" href="Resume.html">Resume</a>
+							</li>
+							<li class="nav__li">
+							<a class="tab active" href="MisProyectos.html">Proyects</a>
+							</li>
+							<li class="nav__li">
+							<a class="tab " href="Blogs.html">Blogs</a>
+							</li>
+							<li class="nav__li">
+							<a class="tab" href="Contact.html">Contact</a>
+							</li>
+						</ul>
+					</nav>
+			</header>
+			<div class="title">
+          		<h1 class="header__title">Proyects</h1>
+        		<div class="header__line"></div>
+        	</div>
+
+			<article class="article">
+				<div id="myBtnContainer" class="BtnContainer">
+				  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+				  <button class="btn" onclick="filterSelection('1')"> App/Web Design</button>
+				  <button class="btn" onclick="filterSelection('2')"> Game Development</button>
+				  <button class="btn" onclick="filterSelection('3')"> Database Management</button>
+				  <button class="btn" onclick="filterSelection('4')"> Data and Algorithms</button>
+				</div>
+				
+				<div class="card 1 popup">
+					<a href="https://devpost.com/software/banorte-user-experience-innovation?ref_content=my-projects-tab&ref_feature=my_projects">
+						<span class="popuptext" id="myPopup">Popup text...</span>
+  						<img src="../images/Banorte.jpg" alt="Me" style="width: 100%;">
+  						<div class="card-container">
+    						<h4>Banorte Design Hackathon</h4>
+    						<p>App/Web Design</p>
+  						</div>
+  					</a>
+				</div>
+				<div class="card 2 popup" onclick="myFunction()">
+					<a href="https://santiparedes.github.io/index.html">
+  						<img src="../images/MyCurriculumjpg.jpg" alt="Me" style="width: 100%;">
+  						<div class="card-container">
+    						<h4>My Digital Portfolio</h4>
+    						<p>App/Web Design</p>
+  						</div>
+  					</a>
+				</div>
+				<div class="card 3 popup" onclick="myFunction()">
+					<a href="https://rillex.itch.io/on-the-fly">
+  						<img src="../images/Gamedevimg.png" alt="Me" style="width: 100%;">
+  						<div class="card-container">
+    						<h4>On the Fly!</h4>
+    						<p>Game Development</p>
+  						</div>
+  					</a>
+				</div>
+				<div class="card 4 popup" onclick="myFunction()">
+					<a href="https://rillex.itch.io/cafeteria-chaos">
+  						<img src="../images/Cafeteria_chaos.jpg" alt="Me" style="width: 100%;">
+  						<div class="card-container">
+    						<h4>Cafeteria Chaos</h4>
+    						<p>Game Development</p>
+  						</div>
+  					</a>
+				</div>
+
+				<div class="card 5 popup" onclick="myFunction()">
+					<a href=>
+  						<img src="../images/blackjpg.jpg" alt="Me" style="width: 100%;">
+  						<div class="card-container">
+    						<h4>Automatic Inventory</h4>
+    						<p>Database Management</p>
+  						</div>
+  					</a>
+				</div>
+
+			</article>
+    	</main>
+	</div>
+	
+<script>
+filterSelection("all")
+</script>
+
+</body>
+</html>
+		
