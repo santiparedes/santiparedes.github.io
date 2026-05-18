@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><title>Users</title><link rel="stylesheet" href="/style.css"></head><body>
+<%- include('../partials_header') %>
+<main>
+  <div class="card">
+    <h2>Users</h2>
+    <form method="GET" action="/users"><input name="q" placeholder="Search user" value="<%= q %>"></form>
+  </div>
+  <table>
+    <tr><th>User</th><th>Country</th><th>Segment</th><th>Embedded interactions</th></tr>
+    <% users.forEach(user => { %>
+      <tr>
+        <td><strong><%= user.firstName %> <%= user.lastName %></strong><br><%= user.email %></td>
+        <td><%= user.country %></td>
+        <td><%= user.segment?.name || '' %></td>
+        <td><%= user.interactions.length %></td>
+      </tr>
+    <% }) %>
+  </table>
+</main></body></html>

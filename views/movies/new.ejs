@@ -1,0 +1,18 @@
+<!doctype html>
+<html><head><title>New Movie</title><link rel="stylesheet" href="/style.css"></head><body>
+<%- include('../partials_header') %>
+<main><div class="card"><h2>New movie</h2>
+<form method="POST" action="/movies">
+<label>Title</label><input name="title" required>
+<label>Year</label><input name="year" type="number">
+<label>Runtime</label><input name="runtime" placeholder="120 min">
+<label>Summary</label><textarea name="summary"></textarea>
+<label>List price</label><input name="listPrice" type="number" step="0.01">
+<label>Views</label><input name="views" type="number">
+<label>Genres, comma separated</label><input name="genres" placeholder="Action, Drama">
+<label>Cast, comma separated</label><input name="cast" placeholder="Actor One, Actor Two">
+<label>Studio name</label><input name="studioName">
+<label>Studio country</label><input name="studioCountry">
+<label>Image URL</label><input name="imageUrl">
+<button class="btn">Create</button>
+</form></div></main></body></html>

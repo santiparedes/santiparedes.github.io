@@ -1,0 +1,9 @@
+<!doctype html>
+<html><head><title>New Genre</title><link rel="stylesheet" href="/style.css"></head><body>
+<%- include('../partials_header') %>
+<main><div class="card"><h2>New genre</h2>
+<form method="POST" action="/genres">
+<label>Name</label><input name="name" required>
+<label>Description</label><textarea name="description"></textarea>
+<button class="btn">Create</button>
+</form></div></main></body></html>

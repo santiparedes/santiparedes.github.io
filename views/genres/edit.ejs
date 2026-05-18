@@ -1,0 +1,9 @@
+<!doctype html>
+<html><head><title>Edit Genre</title><link rel="stylesheet" href="/style.css"></head><body>
+<%- include('../partials_header') %>
+<main><div class="card"><h2>Edit genre</h2>
+<form method="POST" action="/genres/<%= genre._id %>?_method=PUT">
+<label>Name</label><input name="name" value="<%= genre.name %>" required>
+<label>Description</label><textarea name="description"><%= genre.description %></textarea>
+<button class="btn">Save</button>
+</form></div></main></body></html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html><head><title>Activities</title><link rel="stylesheet" href="/style.css"></head><body>
+<%- include('../partials_header') %>
+<main>
+  <div class="card"><h2>Recent activities</h2><p>This collection references users and movies, then uses populate to display related data.</p></div>
+  <table>
+    <tr><th>User</th><th>Movie</th><th>Activity</th><th>Rating</th><th>Device</th><th>Time</th></tr>
+    <% activities.forEach(a => { %>
+      <tr>
+        <td><%= a.userId ? `${a.userId.firstName} ${a.userId.lastName}` : 'Deleted user' %></td>
+        <td><%= a.movieId ? a.movieId.title : 'Deleted movie' %></td>
+        <td><%= a.activity %></td>
+        <td><%= a.rating || '-' %></td>
+        <td><%= a.device %></td>
+        <td><%= a.activityTime ? a.activityTime.toLocaleDateString() : '' %></td>
+      </tr>
+    <% }) %>
+  </table>
+</main></body></html>

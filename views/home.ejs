@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head><title>MovieStream</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<%- include('partials_header') %>
+<main>
+  <div class="card">
+    <h2>Dashboard</h2>
+    <p>Simple CRUD app to test a MongoDB document model for MovieStream.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Movies</h3><p><%= movieCount %></p><a class="btn" href="/movies">Open</a></div>
+    <div class="card"><h3>Genres</h3><p><%= genreCount %></p><a class="btn" href="/genres">Open</a></div>
+    <div class="card"><h3>Users</h3><p><%= userCount %></p><a class="btn" href="/users">Open</a></div>
+    <div class="card"><h3>Activities</h3><p><%= activityCount %></p><a class="btn" href="/activities">Open</a></div>
+  </div>
+</main>
+</body>
+</html>

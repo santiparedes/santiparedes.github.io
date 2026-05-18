@@ -1,0 +1,25 @@
+<!doctype html>
+<html><head><title>Movies</title><link rel="stylesheet" href="/style.css"></head><body>
+<%- include('../partials_header') %>
+<main>
+  <div class="card">
+    <h2>Movies</h2>
+    <form method="GET" action="/movies"><input name="q" placeholder="Search by title, genre or actor" value="<%= q %>"></form>
+    <a class="btn" href="/movies/new">New movie</a>
+  </div>
+  <table>
+    <tr><th>Title</th><th>Genres</th><th>Cast</th><th>Price</th><th>Actions</th></tr>
+    <% movies.forEach(movie => { %>
+      <tr>
+        <td><strong><%= movie.title %></strong><br><%= movie.year %> · <%= movie.runtime %><br><small><%= movie.summary %></small></td>
+        <td><% movie.genres.forEach(g => { %><span class="badge"><%= g.name %></span><% }) %></td>
+        <td><% movie.cast.slice(0,3).forEach(a => { %><span class="badge"><%= a.name %></span><% }) %></td>
+        <td>$<%= movie.listPrice %></td>
+        <td class="actions">
+          <a class="btn secondary" href="/movies/<%= movie._id %>/edit">Edit</a>
+          <form class="inline" method="POST" action="/movies/<%= movie._id %>?_method=DELETE"><button class="btn danger">Delete</button></form>
+        </td>
+      </tr>
+    <% }) %>
+  </table>
+</main></body></html>

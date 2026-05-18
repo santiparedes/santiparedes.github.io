@@ -1,0 +1,23 @@
+<!doctype html>
+<html><head><title>Genres</title><link rel="stylesheet" href="/style.css"></head><body>
+<%- include('../partials_header') %>
+<main>
+  <div class="card">
+    <h2>Genres</h2>
+    <form method="GET" action="/genres"><input name="q" placeholder="Search genre" value="<%= q %>"></form>
+    <a class="btn" href="/genres/new">New genre</a>
+  </div>
+  <table>
+    <tr><th>Name</th><th>Description</th><th>Actions</th></tr>
+    <% genres.forEach(genre => { %>
+      <tr>
+        <td><strong><%= genre.name %></strong></td>
+        <td><%= genre.description %></td>
+        <td class="actions">
+          <a class="btn secondary" href="/genres/<%= genre._id %>/edit">Edit</a>
+          <form class="inline" method="POST" action="/genres/<%= genre._id %>?_method=DELETE"><button class="btn danger">Delete</button></form>
+        </td>
+      </tr>
+    <% }) %>
+  </table>
+</main></body></html>

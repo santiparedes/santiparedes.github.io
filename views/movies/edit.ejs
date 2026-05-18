@@ -1,0 +1,18 @@
+<!doctype html>
+<html><head><title>Edit Movie</title><link rel="stylesheet" href="/style.css"></head><body>
+<%- include('../partials_header') %>
+<main><div class="card"><h2>Edit movie</h2>
+<form method="POST" action="/movies/<%= movie._id %>?_method=PUT">
+<label>Title</label><input name="title" value="<%= movie.title %>" required>
+<label>Year</label><input name="year" type="number" value="<%= movie.year %>">
+<label>Runtime</label><input name="runtime" value="<%= movie.runtime %>">
+<label>Summary</label><textarea name="summary"><%= movie.summary %></textarea>
+<label>List price</label><input name="listPrice" type="number" step="0.01" value="<%= movie.listPrice %>">
+<label>Views</label><input name="views" type="number" value="<%= movie.views %>">
+<label>Genres, comma separated</label><input name="genres" value="<%= movie.genres.map(g => g.name).join(', ') %>">
+<label>Cast, comma separated</label><input name="cast" value="<%= movie.cast.map(a => a.name).join(', ') %>">
+<label>Studio name</label><input name="studioName" value="<%= movie.studio?.name || '' %>">
+<label>Studio country</label><input name="studioCountry" value="<%= movie.studio?.country || '' %>">
+<label>Image URL</label><input name="imageUrl" value="<%= movie.imageUrl || '' %>">
+<button class="btn">Save</button>
+</form></div></main></body></html>
