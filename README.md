@@ -2,6 +2,9 @@
 
 Proyecto individual para migrar el dominio de MovieStream de un modelo relacional en Oracle a un modelo documental en MongoDB. La app permite probar el modelo con una interfaz web simple usando CRUD sobre películas y géneros, además de vistas de usuarios y actividades.
 
+- **Repositorio:** [github.com/santiparedes/santiparedes.github.io](https://github.com/santiparedes/santiparedes.github.io)
+- **App desplegada:** [actividad-4-base-de-datos-no-sql.onrender.com](https://actividad-4-base-de-datos-no-sql.onrender.com/)
+
 ## Qué hace el proyecto
 
 - Define un modelo documental para MovieStream usando MongoDB.
@@ -38,8 +41,8 @@ Elegí este stack porque es directo, fácil de desplegar en Render y suficiente 
 ### 1. Clonar el repositorio
 
 ```bash
-git clone TU_URL_DEL_REPO
-cd moviestream-mongodb
+git clone https://github.com/santiparedes/santiparedes.github.io.git
+cd santiparedes.github.io
 ```
 
 ### 2. Instalar dependencias
@@ -117,13 +120,11 @@ MONGODB_URI=tu_connection_string
 
 7. Abrir la URL pública y probar en incógnito.
 
+**URL de este despliegue:** [https://actividad-4-base-de-datos-no-sql.onrender.com/](https://actividad-4-base-de-datos-no-sql.onrender.com/)
+
 ## Captura de pantalla
 
-Agrega aquí una captura después de desplegar la app:
-
-```md
-![App funcionando](./screenshot.png)
-```
+![App funcionando en Render](./public/evidenciass.png)
 
 ## Archivos importantes
 
